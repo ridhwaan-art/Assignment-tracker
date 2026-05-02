@@ -49,7 +49,7 @@
                 </nav>
             @endif
         </header>
-        <div class="flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
+        <div class="background_color flex items-center justify-center w-full transition-opacity opacity-100 duration-750 lg:grow starting:opacity-0">
             Your homepage content here for un registered accounts
         </div>
 

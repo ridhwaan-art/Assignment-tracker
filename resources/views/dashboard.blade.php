@@ -1,10 +1,10 @@
 <x-app-layout title="Dashboard">
-    <div class="py-12">
+    <div class="container py-12 ">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                        <a href="{{ route('assignments.create') }}" class="text-blue-500">Create New Assignment</a>
-
+                        <a href="{{ route('assignments.create') }}" class="text-blue-500 btn">Create New Assignment</a>
+                    <hr>
                     @forelse ($assignments as $assignment)
                         <div class="mb-4">
                             <h2 class="text-xl font-bold">{{ $assignment->course_name }}</h2>

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.background_color{
+    background-color: aquamarine;
+}
+
+.btn{
+    background-color: greenyellow;
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.btn:hover{
+    transform: rotate3d();
+}
