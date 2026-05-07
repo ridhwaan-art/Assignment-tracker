@@ -5,7 +5,7 @@ Assignment Tracker is web based application for students to manage their assignm
 ## Features
 - Add new assignments with Course Name, Title, Description and Due Date.
 - Edit Existing Assignments.
-- Mark Assignmentds as complete of pending
+- Mark Assignmentds as complete or pending
 - Responsive Design for both mobile and Desktop
 
 ## Tech Stack
@@ -18,20 +18,20 @@ Assignment Tracker is web based application for students to manage their assignm
 
 1. Clone the Repository
 - Open the Terminal or Git bash then run the following command respectively.
-- git clone https://github.com/ridhwaan-art/Assignment-tracker.git
+- [git clone https://github.com/ridhwaan-art/Assignment-tracker.git]
 
-- cd Assignment-tracker
+- [cd Assignment-tracker]
 
 2. Install Dependecies
 - Installing PHP dependecies will be done by running the command below. make sure you are within Assignment-tracker directory
 
-- composer install
+- [composer install]
 
 - Install frontend dependecies by running the commmand below
-- npm install
+- [npm install]
 
 ## Environmental Setup
-- Copy the example environment file and generate app key by running the following command in windows. Make sure you're withing the Assignment-tracker directory.
+- Copy the example environment file and generate app key by running the following command in windows. Make sure you're within the Assignment-tracker directory.
 
 1. first run [cp .env.example .env]
 2. Then run [php artisan key:generate]
@@ -57,3 +57,4 @@ Compile the Bootstrap and CSS assets by running [npm run dev]
 Start the Laravel development server by running 
 [composer run dev or php artisan serve]
 
+Then visit http://localhost:8000 in your browser
