@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AssignmentController;
 
 Route::get('/', function () {
     return view('home');
@@ -15,7 +15,6 @@ Route::get('/assignments/index', [AssignmentController::class, 'index'])->name('
 Route::post('/assignments/{assignment}/complete', [AssignmentController::class, 'complete'])->name('assignments.complete');
 Route::delete('/assignments/{assignment}', [AssignmentController::class, 'destroy'])->name('assignments.destroy');
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
-//Route::get('/assignments/{assignment}', [AssignmentController::class, 'show'])->name('assignments.show');
 Route::get('/assignments/{assignment}/edit', [AssignmentController::class, 'edit'])->name('assignments.edit');
 Route::put('/assignments/{assignment}', [AssignmentController::class, 'update'])->name('assignments.update');
 
