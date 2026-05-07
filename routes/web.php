@@ -6,7 +6,7 @@ use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\DashboardController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::resource('assignments', AssignmentController::class);

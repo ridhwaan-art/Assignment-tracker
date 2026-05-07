@@ -9,7 +9,7 @@ class DashboardController extends Controller
 {
      public function index()
     {
-        $assignments = Assignment::where('user_id', auth('web')->id())->latest()->take(30)->get();
+        $assignments = Assignment::where('user_id', auth('web')->id())->latest()->take(50)->get();
         return view('dashboard', compact('assignments'));
     }
 }

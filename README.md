@@ -1,58 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Assignment Tracker
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Assignment Tracker is web based application for students to manage their assignment. User can add, edit, delete and mark them as complete. Built with Laravel for backend, Bootstrap for responsive user interface and custom CSS for styling.
 
-## About Laravel
+## Features
+- Add new assignments with Course Name, Title, Description and Due Date.
+- Edit Existing Assignments.
+- Mark Assignmentds as complete of pending
+- Responsive Design for both mobile and Desktop
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Tech Stack
+- Backend: Laravel
+- Frontend: Bootstrap, Blade templates and CSS
+- Database: MySQL
+- Package Manager: Composer and NPM
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation and Setup
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Clone the Repository
+- Open the Terminal or Git bash then run the following command respectively.
+- git clone https://github.com/ridhwaan-art/Assignment-tracker.git
 
-## Learning Laravel
+- cd Assignment-tracker
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+2. Install Dependecies
+- Installing PHP dependecies will be done by running the command below. make sure you are within Assignment-tracker directory
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- composer install
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- Install frontend dependecies by running the commmand below
+- npm install
 
-## Agentic Development
+## Environmental Setup
+- Copy the example environment file and generate app key by running the following command in windows. Make sure you're withing the Assignment-tracker directory.
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+1. first run [cp .env.example .env]
+2. Then run [php artisan key:generate]
 
-```bash
-composer require laravel/boost --dev
 
-php artisan boost:install
-```
+## Database Setup
+Update your .env file with your database credentials for example:
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=Assignment_tracker
+DB_USERNAME=root
+DB_PASSWORD=[your_password]
 
-## Contributing
+- Create the database in MySQL or Xampp named: [assigment_tracker]
+- Then run [php artisan migrate] within the Assignment-tracker directory
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Compile the Bootstrap and CSS assets by running [npm run dev]
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Run the Application
+Start the Laravel development server by running 
+[composer run dev or php artisan serve]
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

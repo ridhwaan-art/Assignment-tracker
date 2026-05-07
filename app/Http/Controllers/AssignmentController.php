@@ -9,6 +9,7 @@ class AssignmentController extends Controller
 {
     /**
      * Display a listing of the resource.
+     * This function is absolete as all resources are being listed on Dashboard for convenience
      */
     public function index()
     {
@@ -44,24 +45,9 @@ class AssignmentController extends Controller
             'user_id' => auth('web')->id(),
         ]);
 
-        return redirect()->route('assignments.index')->with('success', 'Assignment created successfully!');
+        return redirect()->route('dashboard')->with('success', 'Assignment created successfully!');
     }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        $assignment = Assignment::findOrFail($id);
-
-        // Check if the authenticated user is the owner of the assignment
-        if ($assignment->user_id !== auth('web')->id()) {
-            abort(403, 'Login first! to perform this action.');
-        }
-
-        return view('assignments.show', compact('assignment'));
-        
-    }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -116,6 +102,7 @@ class AssignmentController extends Controller
         return back();
     }
 
+    // Mark assignment as completed
     public function complete($id)
     {
         $assignment = Assignment::findOrFail($id);

@@ -2,19 +2,119 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: 'Instrument Sans', sans-serif;
+    background-color: #f8fafc;
+}
+
+.navbar{
+    background-color: #0f172a;
+}
+
+.navbar-brand{
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.hero-section{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-title{
+    font-size: 60px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.hero-text{
+    font-size: 20px;
+    color: #64748b;
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+.feature-card{
+    border: none;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover{
+    transform: translateY(-5px);
+}
+
+.btn-custom{
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+footer{
+    background-color: #0f172a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
 .background_color{
     background-color: #f0f0f0;
 }
 
-.btn{
-    background-color: greenyellow;
-    color: blue;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 10px;
+
+.form_container{
+    margin: auto;
+    border: 2px solid purple;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 50%;
 }
 
-.btn:hover{
-    transform: rotate3d();
+.input_name{
+    width: 60%;
+    height: fit-content;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+textarea{
+    width: 60%;
+    height: fit-content;
+    font-weight: 300;
+    border-radius: 5px;
+}
+
+textarea:focus{
+    height: auto;
+    background-color: lightblue;
+    border-radius: 2px solid black;
+}
+
+input[type=text]:focus{
+    background-color: lightblue;
+    border: 2px solid black;
+}
+
+.save-button{
+    background-color: dodgerblue;
+    color: #f0f0f0;
+    width: 100px;
+    border-radius: 5px;
+}
+
+.save-button:hover{
+    background-color: mediumseagreen;
+}
+
+label{
+    font-weight: bold;
 }
